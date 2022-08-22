@@ -1,4 +1,4 @@
-﻿' Developer Express Code Central Example:
+' Developer Express Code Central Example:
 ' How to get information about a geographical point using the Microsoft Bing Geocode web service
 ' 
 ' This example demonstrates how to obtain information about a geographical point
@@ -31,7 +31,6 @@
 ' 
 ' You can find sample updates and versions for different programming languages here:
 ' http://www.devexpress.com/example=E5061
-
 ' Developer Express Code Central Example:
 ' How to get information about a geographical point using the Microsoft Bing Geocode web service
 ' 
@@ -65,7 +64,6 @@
 ' 
 ' You can find sample updates and versions for different programming languages here:
 ' http://www.devexpress.com/example=E5061
-
 ' Developer Express Code Central Example:
 ' How to get information about a geographical point using the Microsoft Bing Geocode web service
 ' 
@@ -99,10 +97,10 @@
 ' 
 ' You can find sample updates and versions for different programming languages here:
 ' http://www.devexpress.com/example=E5061
-
-
 Namespace RequestLocationInformation
-    Partial Public Class Form1
+
+    Partial Class Form1
+
         ''' <summary>
         ''' Required designer variable.
         ''' </summary>
@@ -113,14 +111,14 @@ Namespace RequestLocationInformation
         ''' </summary>
         ''' <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
-            If disposing AndAlso (components IsNot Nothing) Then
-                components.Dispose()
+            If disposing AndAlso (Me.components IsNot Nothing) Then
+                Me.components.Dispose()
             End If
+
             MyBase.Dispose(disposing)
         End Sub
 
-        #Region "Windows Form Designer generated code"
-
+#Region "Windows Form Designer generated code"
         ''' <summary>
         ''' Required method for Designer support - do not modify
         ''' the contents of this method with the code editor.
@@ -143,18 +141,18 @@ Namespace RequestLocationInformation
             Me.lciResult = New DevExpress.XtraLayout.LayoutControlItem()
             Me.lciMap = New DevExpress.XtraLayout.LayoutControlItem()
             Me.defaultLookAndFeel1 = New DevExpress.LookAndFeel.DefaultLookAndFeel(Me.components)
-            DirectCast(Me.mapControl, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.layoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.mapControl), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.layoutControl1), System.ComponentModel.ISupportInitialize).BeginInit()
             Me.layoutControl1.SuspendLayout()
-            DirectCast(Me.meResult.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.teLongitude.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.teLatitude.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.layoutControlGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.lciLatitude, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.lciLongitude, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.layoutControlItem3, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.lciResult, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.lciMap, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.meResult.Properties), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.teLongitude.Properties), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.teLatitude.Properties), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.layoutControlGroup1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.lciLatitude), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.lciLongitude), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.layoutControlItem3), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.lciResult), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.lciMap), System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             ' 
             ' mapControl
@@ -201,6 +199,7 @@ Namespace RequestLocationInformation
             Me.btnGeocode.StyleController = Me.layoutControl1
             Me.btnGeocode.TabIndex = 6
             Me.btnGeocode.Text = "Send Geocode Request"
+            AddHandler Me.btnGeocode.Click, New System.EventHandler(AddressOf Me.requestLocation_Click)
             ' 
             ' teLongitude
             ' 
@@ -220,9 +219,9 @@ Namespace RequestLocationInformation
             ' 
             ' layoutControlGroup1
             ' 
-            Me.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True
+            Me.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
             Me.layoutControlGroup1.GroupBordersVisible = False
-            Me.layoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() { Me.lciLatitude, Me.lciLongitude, Me.layoutControlItem3, Me.lciResult, Me.lciMap})
+            Me.layoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.lciLatitude, Me.lciLongitude, Me.layoutControlItem3, Me.lciResult, Me.lciMap})
             Me.layoutControlGroup1.Location = New System.Drawing.Point(0, 0)
             Me.layoutControlGroup1.Name = "layoutControlGroup1"
             Me.layoutControlGroup1.Padding = New DevExpress.XtraLayout.Utils.Padding(4, 4, 4, 4)
@@ -287,39 +286,53 @@ Namespace RequestLocationInformation
             Me.Controls.Add(Me.layoutControl1)
             Me.Name = "Form1"
             Me.Text = "Request Location Information Example"
-            DirectCast(Me.mapControl, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.layoutControl1, System.ComponentModel.ISupportInitialize).EndInit()
+            AddHandler Me.Load, New System.EventHandler(AddressOf Me.Form1_Load)
+            CType((Me.mapControl), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.layoutControl1), System.ComponentModel.ISupportInitialize).EndInit()
             Me.layoutControl1.ResumeLayout(False)
-            DirectCast(Me.meResult.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.teLongitude.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.teLatitude.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.layoutControlGroup1, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.lciLatitude, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.lciLongitude, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.layoutControlItem3, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.lciResult, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.lciMap, System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.meResult.Properties), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.teLongitude.Properties), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.teLatitude.Properties), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.layoutControlGroup1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.lciLatitude), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.lciLongitude), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.layoutControlItem3), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.lciResult), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.lciMap), System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
-
         End Sub
 
-        #End Region
+#End Region
         Private mapControl As DevExpress.XtraMap.MapControl
+
         Private layoutControl1 As DevExpress.XtraLayout.LayoutControl
+
         Private meResult As DevExpress.XtraEditors.MemoEdit
-        Private WithEvents btnGeocode As DevExpress.XtraEditors.SimpleButton
+
+        Private btnGeocode As DevExpress.XtraEditors.SimpleButton
+
         Private teLongitude As DevExpress.XtraEditors.TextEdit
+
         Private teLatitude As DevExpress.XtraEditors.TextEdit
+
         Private layoutControlGroup1 As DevExpress.XtraLayout.LayoutControlGroup
+
         Private lciLatitude As DevExpress.XtraLayout.LayoutControlItem
+
         Private lciLongitude As DevExpress.XtraLayout.LayoutControlItem
+
         Private layoutControlItem3 As DevExpress.XtraLayout.LayoutControlItem
+
         Private lciResult As DevExpress.XtraLayout.LayoutControlItem
+
         Private lciMap As DevExpress.XtraLayout.LayoutControlItem
+
         Private imageLayer As DevExpress.XtraMap.ImageLayer
+
         Private imageProvider As DevExpress.XtraMap.BingMapDataProvider
+
         Private informationLayer As DevExpress.XtraMap.InformationLayer
+
         Private defaultLookAndFeel1 As DevExpress.LookAndFeel.DefaultLookAndFeel
     End Class
 End Namespace
-
