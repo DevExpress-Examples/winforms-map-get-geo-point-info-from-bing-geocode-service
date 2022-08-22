@@ -1,4 +1,4 @@
-﻿' Developer Express Code Central Example:
+' Developer Express Code Central Example:
 ' How to get information about a geographical point using the Microsoft Bing Geocode web service
 ' 
 ' This example demonstrates how to obtain information about a geographical point
@@ -31,7 +31,6 @@
 ' 
 ' You can find sample updates and versions for different programming languages here:
 ' http://www.devexpress.com/example=E5061
-
 ' Developer Express Code Central Example:
 ' How to get information about a geographical point using the Microsoft Bing Geocode web service
 ' 
@@ -65,7 +64,6 @@
 ' 
 ' You can find sample updates and versions for different programming languages here:
 ' http://www.devexpress.com/example=E5061
-
 ' Developer Express Code Central Example:
 ' How to get information about a geographical point using the Microsoft Bing Geocode web service
 ' 
@@ -99,7 +97,6 @@
 ' 
 ' You can find sample updates and versions for different programming languages here:
 ' http://www.devexpress.com/example=E5061
-
 ' Developer Express Code Central Example:
 ' How to get information about a geographical point using the MS Bing Geocode data provider
 ' 
@@ -133,31 +130,26 @@
 ' 
 ' You can find sample updates and versions for different programming languages here:
 ' http://www.devexpress.com/example=E5061
-
 Imports System.Reflection
-Imports System.Runtime.CompilerServices
 Imports System.Runtime.InteropServices
 
 ' General Information about an assembly is controlled through the following 
 ' set of attributes. Change these attribute values to modify the information
 ' associated with an assembly.
-<Assembly: AssemblyTitle("RequestLocationInformation")>
-<Assembly: AssemblyDescription("")>
-<Assembly: AssemblyConfiguration("")>
-<Assembly: AssemblyCompany("")>
-<Assembly: AssemblyProduct("RequestLocationInformation")>
-<Assembly: AssemblyCopyright("Copyright ©  2014")>
-<Assembly: AssemblyTrademark("")>
-<Assembly: AssemblyCulture("")>
-
+<Assembly:AssemblyTitle("RequestLocationInformation")>
+<Assembly:AssemblyDescription("")>
+<Assembly:AssemblyConfiguration("")>
+<Assembly:AssemblyCompany("")>
+<Assembly:AssemblyProduct("RequestLocationInformation")>
+<Assembly:AssemblyCopyright("Copyright ©  2014")>
+<Assembly:AssemblyTrademark("")>
+<Assembly:AssemblyCulture("")>
 ' Setting ComVisible to false makes the types in this assembly not visible 
 ' to COM components.  If you need to access a type in this assembly from 
 ' COM, set the ComVisible attribute to true on that type.
-<Assembly: ComVisible(False)>
-
+<Assembly:ComVisible(False)>
 ' The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("eb496a9d-08bf-43c7-9b0a-7870d6e2fb48")>
-
+<Assembly:Guid("eb496a9d-08bf-43c7-9b0a-7870d6e2fb48")>
 ' Version information for an assembly consists of the following four values:
 '
 '      Major Version
@@ -168,5 +160,5 @@ Imports System.Runtime.InteropServices
 ' You can specify all the values or you can default the Build and Revision Numbers 
 ' by using the '*' as shown below:
 ' [assembly: AssemblyVersion("1.0.*")]
-<Assembly: AssemblyVersion("1.0.0.0")>
-<Assembly: AssemblyFileVersion("1.0.0.0")>
+<Assembly:AssemblyVersion("1.0.0.0")>
+<Assembly:AssemblyFileVersion("1.0.0.0")>
