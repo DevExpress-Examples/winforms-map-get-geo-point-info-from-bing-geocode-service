@@ -1,4 +1,4 @@
-﻿' Developer Express Code Central Example:
+' Developer Express Code Central Example:
 ' How to get information about a geographical point using the Microsoft Bing Geocode web service
 ' 
 ' This example demonstrates how to obtain information about a geographical point
@@ -31,7 +31,6 @@
 ' 
 ' You can find sample updates and versions for different programming languages here:
 ' http://www.devexpress.com/example=E5061
-
 ' Developer Express Code Central Example:
 ' How to get information about a geographical point using the Microsoft Bing Geocode web service
 ' 
@@ -65,7 +64,6 @@
 ' 
 ' You can find sample updates and versions for different programming languages here:
 ' http://www.devexpress.com/example=E5061
-
 ' Developer Express Code Central Example:
 ' How to get information about a geographical point using the Microsoft Bing Geocode web service
 ' 
@@ -99,10 +97,10 @@
 ' 
 ' You can find sample updates and versions for different programming languages here:
 ' http://www.devexpress.com/example=E5061
-
-
 Namespace RequestLocationInformation
-    Partial Public Class Form1
+
+    Partial Class Form1
+
         ''' <summary>
         ''' Required designer variable.
         ''' </summary>
@@ -113,14 +111,14 @@ Namespace RequestLocationInformation
         ''' </summary>
         ''' <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
-            If disposing AndAlso (components IsNot Nothing) Then
-                components.Dispose()
+            If disposing AndAlso (Me.components IsNot Nothing) Then
+                Me.components.Dispose()
             End If
+
             MyBase.Dispose(disposing)
         End Sub
 
-        #Region "Windows Form Designer generated code"
-
+#Region "Windows Form Designer generated code"
         ''' <summary>
         ''' Required method for Designer support - do not modify
         ''' the contents of this method with the code editor.
@@ -136,9 +134,9 @@ Namespace RequestLocationInformation
             Me.contextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
             Me.tbResult = New System.Windows.Forms.RichTextBox()
             Me.panelControl3 = New DevExpress.XtraEditors.PanelControl()
-            DirectCast(Me.panelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.panelControl1), System.ComponentModel.ISupportInitialize).BeginInit()
             Me.panelControl1.SuspendLayout()
-            DirectCast(Me.panelControl3, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.panelControl3), System.ComponentModel.ISupportInitialize).BeginInit()
             Me.panelControl3.SuspendLayout()
             Me.SuspendLayout()
             ' 
@@ -163,6 +161,7 @@ Namespace RequestLocationInformation
             Me.requestLocation.TabIndex = 5
             Me.requestLocation.Text = "Request Location Information"
             Me.requestLocation.UseVisualStyleBackColor = True
+            AddHandler Me.requestLocation.Click, New System.EventHandler(AddressOf Me.requestLocation_Click)
             ' 
             ' tbLongitude
             ' 
@@ -208,7 +207,7 @@ Namespace RequestLocationInformation
             Me.tbResult.Dock = System.Windows.Forms.DockStyle.Fill
             Me.tbResult.Location = New System.Drawing.Point(2, 157)
             Me.tbResult.Name = "tbResult"
-            Me.tbResult.ReadOnly = True
+            Me.tbResult.[ReadOnly] = True
             Me.tbResult.Size = New System.Drawing.Size(380, 316)
             Me.tbResult.TabIndex = 0
             Me.tbResult.Text = ""
@@ -231,26 +230,32 @@ Namespace RequestLocationInformation
             Me.Controls.Add(Me.panelControl3)
             Me.Name = "Form1"
             Me.Text = "Form1"
-            DirectCast(Me.panelControl1, System.ComponentModel.ISupportInitialize).EndInit()
+            AddHandler Me.Load, New System.EventHandler(AddressOf Me.Form1_Load)
+            CType((Me.panelControl1), System.ComponentModel.ISupportInitialize).EndInit()
             Me.panelControl1.ResumeLayout(False)
             Me.panelControl1.PerformLayout()
-            DirectCast(Me.panelControl3, System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.panelControl3), System.ComponentModel.ISupportInitialize).EndInit()
             Me.panelControl3.ResumeLayout(False)
             Me.ResumeLayout(False)
-
         End Sub
 
-        #End Region
-
+#End Region
         Private panelControl1 As DevExpress.XtraEditors.PanelControl
+
         Private tbLongitude As System.Windows.Forms.TextBox
+
         Private label2 As System.Windows.Forms.Label
+
         Private tbLatitude As System.Windows.Forms.TextBox
+
         Private label1 As System.Windows.Forms.Label
-        Private WithEvents requestLocation As System.Windows.Forms.Button
+
+        Private requestLocation As System.Windows.Forms.Button
+
         Private contextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
+
         Private tbResult As System.Windows.Forms.RichTextBox
+
         Private panelControl3 As DevExpress.XtraEditors.PanelControl
     End Class
 End Namespace
-
